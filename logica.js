@@ -1,6 +1,8 @@
 
     let tarjeta=document.getElementById("item");
     let tarjetas=document.getElementById("allItem");
+    let datos=document.getElementById("datos");
+
     fetch('https://pokeapi.co/api/v2/pokemon/ditto').
     then(res=>res.json()).
     then(data=>{
@@ -47,6 +49,20 @@
         
         
         `;
+        datos.innerHTML=`
+        
+        <p>habilidades:</p>
+        `;
+        for (let index = 0; index < data.abilities.length; index++) {
+            
+            datos.innerHTML+=`
+        
+            <p>-${data.abilities[index].ability.name}</p>
+            `;
+          
+        }
+        
+
         
         });
 

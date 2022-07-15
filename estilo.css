@@ -4,12 +4,6 @@
     align-items: center;
 }
 
-.container{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    width: 25%;
-}
 .title{
     font-size:xx-large;
     display: flex;
@@ -18,6 +12,14 @@
     background: none;
     text-shadow: 1px 1px black;
 }
+
+.container{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    width: 25%;
+}
+
 .item{
     display: flex;
     flex-direction: column;
@@ -30,6 +32,17 @@
 
     
 }
+
+.datos{
+    background: rgba(155, 143, 143, 0.729);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 10px;
+    justify-content: center;
+    gap: 1rem;
+}
+
 .name{
     display: flex;
     justify-content: center;
