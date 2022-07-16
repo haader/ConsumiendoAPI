@@ -5,6 +5,9 @@
     let hability=document.getElementById("habilidades");
     let exp=document.getElementById("exp");
     let type=document.getElementById("type");
+    let seleccion=1;
+
+    let back=false;
     
     
     
@@ -40,7 +43,7 @@
     }
 
     function selecionar(id){
-
+        seleccion=id;
         fetch('https://pokeapi.co/api/v2/pokemon/'+id).
         then(res=>res.json()).
         then(data=>{
@@ -95,3 +98,30 @@
         });
 
     };
+
+
+    function btnChange(id){
+        fetch('https://pokeapi.co/api/v2/pokemon/'+id).
+        then(res=>res.json()).
+        then(data=>{
+
+            if(back==true){
+        
+                tarjeta.innerHTML=`
+                <img src="${data.sprites.front_default}">
+                <h3 class="name">${data.name}</h3>
+                `;
+                back=false;
+
+            }else{
+                tarjeta.innerHTML=`
+                <img src="${data.sprites.back_default}">
+                <h3 class="name">${data.name}</h3>
+                `;  
+                back=true;
+            }
+
+        });
+    }
+
+    

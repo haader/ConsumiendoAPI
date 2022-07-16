@@ -58,6 +58,30 @@
 
     
 }
+/*contenedor btn y item*/
+.itemDiv{
+    display: flex;
+    flex-direction: row;
+    
+}
+/*botones*/
+.btn{
+    background: rgba(255, 255, 255, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid black;
+    border-radius: 10px;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.btn:hover{
+    color: chocolate;
+    cursor: pointer;
+}
+
 
 .datos{
     background: rgba(155, 143, 143, 0.729);
@@ -101,16 +125,7 @@
 
 
 
-.btn{
-    font-size: x-large;
-    background-color: red;
-    border:1px solid black;
-    border-radius: 10px;
-    color: white;
-}
-.btn:hover{
-    color: chocolate;
-}
+
 
 
 .allItem{
