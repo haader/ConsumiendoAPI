@@ -122,6 +122,7 @@
     border: 1px solid black;
     background: rgba(155, 143, 143, 0.729);
     padding: 2rem;
+    justify-content: center;
 
 }
 
@@ -177,5 +178,12 @@
     .info ul li{
         font-size: 10px;
         width: auto;
+        margin-left: 3px;
+    }
+    .allItem{
+        gap: 0.5rem;
+        padding-left: 3px;
+        padding-right: 3px;
+        justify-content: center;
     }
 }
