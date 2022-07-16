@@ -40,11 +40,11 @@
     width: 100%;
     
 }
-.container{
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-}
+                        .container{
+                            position: -webkit-sticky;
+                            position: sticky;
+                            top: 0;
+                        }
 
 .item{
     display: flex;
@@ -96,6 +96,7 @@
     background: red;
     color: white;
     margin: 0;
+    font-family: monospace;
 }
 
 
@@ -182,8 +183,9 @@
     }
     .allItem{
         gap: 0.5rem;
-        padding-left: 3px;
+        padding-left: 10px;
         padding-right: 3px;
         justify-content: center;
     }
+    
 }

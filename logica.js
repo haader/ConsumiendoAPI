@@ -22,7 +22,7 @@
         
     });
 
-    for (let index = 0; index < 70; index++) {
+    for (let index = 1; index < 70; index++) {
         
         fetch('https://pokeapi.co/api/v2/pokemon/'+index).
         then(res=>res.json()).
@@ -62,7 +62,7 @@
                     
                     exp.innerHTML+=`
                 
-                    <li>-${data.base_experience}</li>
+                    <li>${data.base_experience}</li>
                     `;
                 
                 
