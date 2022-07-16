@@ -2,7 +2,12 @@
     let tarjeta=document.getElementById("item");
     let tarjetas=document.getElementById("allItem");
     let datos=document.getElementById("datos");
-
+    let hability=document.getElementById("habilidades");
+    let exp=document.getElementById("exp");
+    let type=document.getElementById("type");
+    
+    
+    
     fetch('https://pokeapi.co/api/v2/pokemon/ditto').
     then(res=>res.json()).
     then(data=>{
@@ -14,11 +19,10 @@
         
         
         `;
-        console.log(data.name+" "+data.sprites.front_default);
-        console.log(data);
+        
     });
 
-    for (let index = 90; index < 110; index++) {
+    for (let index = 0; index < 70; index++) {
         
         fetch('https://pokeapi.co/api/v2/pokemon/'+index).
         then(res=>res.json()).
@@ -49,18 +53,42 @@
         
         
         `;
-        datos.innerHTML=`
+
         
-        <p>habilidades:</p>
-        `;
-        for (let index = 0; index < data.abilities.length; index++) {
-            
-            datos.innerHTML+=`
-        
-            <p>-${data.abilities[index].ability.name}</p>
-            `;
-          
-        }
+        console.log(data);
+
+            exp.innerHTML=``;
+                
+                    
+                    exp.innerHTML+=`
+                
+                    <li>-${data.base_experience}</li>
+                    `;
+                
+                
+
+                hability.innerHTML=``
+
+                for (let index = 0; index < data.abilities.length; index++) {
+                    
+                    hability.innerHTML+=`
+                
+                    <li>${data.abilities[index].ability.name}</li>
+                    `;
+                
+                }
+
+                type.innerHTML=``;
+                
+                for (let index = 0; index < data.types.length; index++) {
+                
+                    type.innerHTML=`
+                    
+                    <li>${data.types[index].type.name}</li>
+                    
+                    `;
+                    
+                }
         
 
         
