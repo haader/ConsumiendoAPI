@@ -139,6 +139,7 @@
         right: 2rem;
     }
     .container{
+        padding: 5px;
         gap: 5px;
     }
     .datos{
@@ -153,6 +154,7 @@
         
     }
     .info{
+        padding-left: 0.5rem;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -179,7 +181,8 @@
     .info ul li{
         font-size: 10px;
         width: auto;
-        margin-left: 3px;
+        margin-left: 25px;
+
     }
     .allItem{
         gap: 0.5rem;
